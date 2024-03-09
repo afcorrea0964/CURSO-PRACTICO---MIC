@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD de Clientes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h2>CRUD de Clientes</h2>
+
+  <form id="clienteForm" onsubmit="agregarOActualizarCliente(event)">
+    <input type="hidden" id="clienteId">
+    <input type="text" id="nombre" placeholder="Nombre" required>
+    <input type="text" id="apellido" placeholder="Apellido" required>
+    <input type="text" id="direccion" placeholder="Dirección" required>
+    <input type="text" id="telefono" placeholder="Teléfono" required>
+    <button type="submit">Guardar</button>
+    <button type="button" onclick="limpiarFormulario()">Cancelar</button>
+  </form>
+
+  <table id="tablaClientes">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Dirección</th>
+        <th>Teléfono</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody id="tbodyClientes">
+    </tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
