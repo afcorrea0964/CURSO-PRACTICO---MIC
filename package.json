@@ -1,0 +1,31 @@
+{
+  "name": "crud-mysql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "babel-node backend/index.js",
+    "start": "concurrently \"nodemon backend/index.js --exec babel-node\" \"node frontend_server.js\"",
+    "build": "babel backend -d backend"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "mssql": "^10.0.2",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.9",
+    "@babel/core": "^7.23.9",
+    "@babel/node": "^7.23.9",
+    "@babel/plugin-transform-runtime": "^7.24.0",
+    "@babel/preset-env": "^7.23.9",
+    "nodemon": "^3.1.0"
+  }
+}
